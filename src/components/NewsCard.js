@@ -1,18 +1,22 @@
-import "./NewsCard.scss";
+//import "./NewsCard.scss";
+//import { useState } from "react";
+import Favorites from "./Favorites";
 
-export default function NewsCard({ article }) {
+
+export default function NewsCard({ article, handleFavoriteClick }) {
   return (
-    <div className="Main-block">
-      <div className="Block-with-img">
-        <img
-          className="articleImage"
-          alt="Article"
-          src={article.urlToImage}
-        ></img>
-        <div className="Block-with-heading">
-          <h3 className="Category-name">{article.categoryName}</h3>
-          <h2 className="Article-title">{article.title}</h2>
-          <p className="Article-author">{article.author}</p>
+    <div>
+      <img
+        className="article-image"
+        alt="article"
+        src={article?.urlToImage}
+      ></img>
+      <div className="text-container">
+        <div>
+        <h3 className="category-name">{article?.categoryName}</h3>
+        <h2 className="article-title">{article?.title}</h2>
+        <p className="article-author">{article?.author}</p>
+        <Favorites handleFavoriteClick={handleFavoriteClick} article={article}/>
         </div>
       </div>
     </div>

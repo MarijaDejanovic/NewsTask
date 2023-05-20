@@ -1,0 +1,145 @@
+:root {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+body {
+  background-color: #f2f2f2;
+  position: relative;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.category-name {
+  font-family: "InterV_Bold";
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: -0.0153846px;
+  text-transform: uppercase;
+  color: #1E71BB;
+  margin-left: 5%;
+}
+
+.article-title {
+  font-size: 25px;
+  margin-left: 5%;
+  font-family: "InterV_Medium";
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.11px;
+  color: #000000;
+}
+
+.article-author {
+  font-size: 16px;
+  color: #9B9B9B;
+  font-family: "InterV";
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.0675px;
+  color: #1D1D1B;
+  margin-left: 5%;
+  margin-bottom: 10%;
+}
+
+.card {
+  position: relative;
+  width: 33%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+  border: none;
+}
+@media screen and (max-width: 576px) {
+  .card {
+    width: 100%;
+  }
+}
+.card div {
+  width: 100%;
+  position: relative;
+  margin-right: 10%;
+}
+.card div .text-container {
+  position: absolute;
+  height: 50%;
+  bottom: 0;
+  background-color: #fff;
+  border-radius: 0% 0% 10% 10%;
+}
+.card .article-image {
+  width: 100%;
+  height: 212px;
+  margin: 0px;
+  border-radius: 10% 10% 10% 10%;
+}
+
+.header {
+  background: linear-gradient(180deg, #BB1E1E 71.29%, #B21919 99.95%);
+  display: block;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 170px;
+  padding-right: 170px;
+  justify-content: space-between;
+  height: 50px;
+}
+.header h2 {
+  font-family: InterV_Bold;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: -0.1360000074px;
+  text-align: left;
+}
+.header h3 {
+  font-family: InterV;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.1190000027px;
+  text-align: left;
+}
+.header .get-button {
+  font-family: InterV_Bold;
+  height: 40px;
+  width: 69px;
+  left: 0px;
+  top: 0px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.header .no-thanks-button {
+  border: none;
+  text-decoration: none;
+  font-family: InterV_Bold;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  background-color: transparent;
+  color: white;
+}
+.header .no-thanks-button:hover {
+  text-decoration: underline;
+}
+
+.all-articles {
+  font-family: InterV;
+}
+
+ul {
+  list-style: none;
+}
+
+.favorite-sign {
+  fill: red;
+}/*# sourceMappingURL=main.css.map */

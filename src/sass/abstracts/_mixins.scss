@@ -1,0 +1,27 @@
+@mixin respond-to ($breakpoint) {
+    @if map-has-key($map: $breakpoints , $key: $breakpoint ) {
+        @media screen and (min-width: map-get($map: $breakpoints, $key: $breakpoint) ) {
+            @content; 
+        }
+    }
+    @else {
+        @error 
+            "Ključ #{breakpoint} ne postoji u mapi."
+            + "Dostupni ključevi su: #{map-keys($map: $breakpoints)}";
+    }
+        
+}
+
+//
+@mixin when-have ($selector) {
+    &#{$selector}{
+        @content;
+    }
+}
+
+@mixin when-inside ($selector) {
+    #{$selector} &{
+        @content;
+    }
+    
+}

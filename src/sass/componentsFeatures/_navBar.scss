@@ -1,0 +1,35 @@
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    .nav-link1 {
+        background-color: white;
+        color: #BB1E1E;
+        align-items: center;
+
+    
+      }
+}
+li {
+    margin-bottom: 10px; 
+  }
+
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray; // Customize the link color
+  margin-right: 5px;
+  
+  
+  
+  .nav-text {
+    font-family: 'InterV_Semi';
+    font-size: 14px; // Customize the font size of the category text
+    text-decoration: none;
+    color: gray;
+  }
+}

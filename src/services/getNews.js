@@ -8,14 +8,14 @@ export default async function getNews(categoryName) {
   try {
     const url = `https://newsapi.org/v2/everything?q=${categoryName}&from=${formatedDate}&sortBy=publishedAt&apiKey=${process.env.REACT_APP_API_KEY}`;
 
-  
-    const response = await fetch(url); 
+    const response = await fetch(url);
     if (response.ok) {
       const json = await response.json();
       const articles = json.articles.map((article) => ({
         ...article,
         categoryName: categoryName,
       }));
+      console.log(articles);
       return articles;
     } else {
       throw new Error("Try again!");
