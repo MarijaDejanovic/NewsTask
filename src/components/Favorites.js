@@ -6,8 +6,8 @@ export default function Favorites({ article, handleFavoriteClick }) {
     return (
         <IconContext.Provider value={{ className: "favorite-sign", size: "30px" }}>
           <MdFavoriteBorder onClick={(e) => {
-            e.preventDefault();
             e.stopPropagation();
+            e.preventDefault();
             handleFavoriteClick(article)
           }} />
         </IconContext.Provider>

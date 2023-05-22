@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Page404 from "./Pages/Page404";
 import "./sass/main.scss";
 import Layout from "./components/Layout";
@@ -7,13 +7,14 @@ import NewsPage from "./Pages/NewsPage";
 //import getNews from "./services/getNews";
 import { categories } from "./constant/categories";
 import Article from "./components/Article";
-import SearchBar from "./components/SearchBar";
+//import SearchBar from "./components/SearchBar";
 
 const App = () => {
   const [article, setArticle] = useState({});
-  const [post, setPostedArtical] = useState([]);
-  const [searchResult, setSearchResult] = useState([]);
+  //const [post, setPostedArtical] = useState([]);
   const [favoriteArticles, setFavoriteArticles] = useState([]);
+ 
+  
     
   const dummyData = [
     {
@@ -27,7 +28,7 @@ const App = () => {
       author: "Iva Tenšek",
       publishedAt: "2023-05-16T10:46:08Z",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Marija Dejanovic.",
     },
     {
       urlToImage:
@@ -172,14 +173,17 @@ const App = () => {
   const setCurrentArticle = (currentArticle) => {
     setArticle(currentArticle);
   };
+
   const handleFavoriteClick = (article) => {
-    if (favoriteArticles.some((favoriteArticle)  => favoriteArticle.id !== article.id)) {
+    if (!favoriteArticles.some((favoriteArticle)  => favoriteArticle.id === article.id)) {
       setFavoriteArticles((prevArticle) => [...prevArticle, article])
     }
   };
+  
+
   return (
     <div>
-      <Layout />
+      <Layout news={dummyData} setCurrentArticle={setCurrentArticle}  />
       <Routes>
         <Route
           path="/"
@@ -220,7 +224,6 @@ const App = () => {
             <NewsPage news={favoriteArticles} setCurrentArticle={setCurrentArticle} handleFavoriteClick={handleFavoriteClick} />
           }
         ></Route>
-      <Route path="/articles/:articleTitle" element={<SearchBar/>} post={post} setSearchResult={setSearchResult}></Route>
         <Route path="*" element={<Page404 />}></Route>
       </Routes>
     </div>

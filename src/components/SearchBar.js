@@ -2,16 +2,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 
-export default function SearchBar ({news}) {
+export default function SearchBar ({handleSearchChange,setCurrentArticle, input}) {
+
+  
   const handleSubmit = (e) => e.preventDefault();
-  const handleSearchChange = (e) => {
-  const resultArray  = news.filter(article => article.title.includes(e.target.value) || article.body.includes(e.target.value))
-    setSearchResult(resultArray);
-  };
+  
   return (
     <header>
-      <form onSubmit={handleSubmit}>
-        <input type="text" id="serach" onChange={handleSearchChange}></input>
+      <form onSubmit={handleSubmit} setCurrentArticle={setCurrentArticle}>
+        <input type="text" id="search" onChange={handleSearchChange} value={input}></input>
         <button>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </button>
