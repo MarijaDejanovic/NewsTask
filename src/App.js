@@ -182,7 +182,7 @@ const App = () => {
   
 
   return (
-    <div>
+    <div className="container">
       <Layout news={dummyData} setCurrentArticle={setCurrentArticle}  />
       <Routes>
         <Route

@@ -1,6 +1,6 @@
 ul{
     list-style: none;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
@@ -21,15 +21,23 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: gray; // Customize the link color
+  color: gray; 
   margin-right: 5px;
   
   
   
   .nav-text {
     font-family: 'InterV_Semi';
-    font-size: 14px; // Customize the font size of the category text
+    font-size: 14px; 
     text-decoration: none;
     color: gray;
   }
 }
+
+.nav-bar{
+  position: relative;
+  justify-content: flex-end;
+  margin-left: 10em; 
+  flex-wrap: wrap;
+}
+

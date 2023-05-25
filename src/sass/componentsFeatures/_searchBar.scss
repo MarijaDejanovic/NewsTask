@@ -1,0 +1,45 @@
+.search-bar-header{
+    display: flex;
+    align-items: center;
+    padding-left: $app-padding;
+    padding-right: $app-padding;
+    padding-top: 2em;
+    justify-content: space-between;
+    height: 50px;
+}
+h1 {
+    padding-right: 10px;
+    color: #BB1E1E; 
+    .news-part-title{
+        color: black;
+    }
+  }
+
+.search-field {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-right: 10px;
+    width: 20px;
+  }
+  .search-input{
+    border: none;
+    width: 30em;
+    height: 3em;
+    border-radius: 3% 3% 3% 3%;
+  }
+  
+  .search-button{
+   height: 2em;
+   background-color: #BB1E1E;
+   color: white;
+   font-family: InterV_Bold;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    border: none;
+    border-radius: 5% 5% 5% 5%;
+    margin-left: -80px;
+
+  }

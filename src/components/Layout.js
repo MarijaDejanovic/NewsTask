@@ -3,6 +3,7 @@ import SearchBar from "./SearchBar";
 import NavBar from "./NavBar";
 import { useState } from "react";
 import NewsList from "./NewsList";
+import { Outlet } from "react-router-dom";
 
 export default function Layout({ news, setCurrentArticle }) {
   const [searchResult, setSearchResult] = useState([]);
@@ -38,6 +39,7 @@ export default function Layout({ news, setCurrentArticle }) {
       <SearchBar handleSearchChange={handleSearchChange} input={input} />
       {containsInput && <NewsList searchResult={searchResult} setCurrentArticle={setCurrentArticle} clearInput={clearInput} />}
       <NavBar />
+      <Outlet/>
       {/* ikonice za kategorije, tu ćemo staviti rute */}
     </>
   );

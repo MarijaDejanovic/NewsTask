@@ -1,7 +1,4 @@
-import { useEffect, useState } from "react";
-//import getNews from "../services/getNews";
 import NewsCard from "../components/NewsCard";
-//import "./Home.scss";
 import LatestNews from "./LatestNews";
 import { NavLink } from "react-router-dom";
 
@@ -26,8 +23,8 @@ export default function NewsPage({ news, setCurrentArticle, handleFavoriteClick 
               );
             }
           })}
-      </div>
       <LatestNews />
+      </div>    
     </div>
   );
 }
