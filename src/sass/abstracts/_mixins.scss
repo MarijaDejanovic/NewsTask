@@ -11,8 +11,6 @@
     }
         
 }
-
-//
 @mixin when-have ($selector) {
     &#{$selector}{
         @content;

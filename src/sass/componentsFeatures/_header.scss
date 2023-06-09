@@ -1,52 +1,60 @@
-.header{
+.header-container {
     background: linear-gradient(180deg, #BB1E1E 71.29%, #B21919 99.95%);
     display: block;
     color: white;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     padding-left: $app-padding;
     padding-right: $app-padding;
     justify-content: space-between;
     height: 50px;
-    
-    h2{
-        font-family: InterV_Bold;
-        font-size: 16px;
-        line-height: 21px;
-        letter-spacing: -0.13600000739097595px;
-        text-align: left;
+    margin-top: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100; 
+  
+    h2 {
+      font-family: InterV_Bold;
+      font-size: 16px;
+      line-height: 21px;
+      letter-spacing: -0.13600000739097595px;
+      text-align: left;
     }
-    
-    h3{
-        font-family: InterV;
-        font-size: 14px;
-        line-height: 21px;
-        letter-spacing: -0.11900000274181366px;
-        text-align: left;
-
+  
+    h3 {
+      font-family: InterV;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -0.11900000274181366px;
+      text-align: left;
     }
-
-    .get-button{
-        font-family: InterV_Bold;
-        height: 40px;
-        width: 69px;
-        left: 0px;
-        top: 0px;
-        border-radius: 8px;
-        font-weight: bold;
+  
+    .get-button {
+      font-family: InterV_Bold;
+      height: 40px;
+      width: 69px;
+      left: 0px;
+      top: 0px;
+      border-radius: 8px;
+      font-weight: bold;
     }
-    .no-thanks-button{
-        border: none;
-        text-decoration: none;
-        font-family: InterV_Bold;
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 0px;
-        text-align: center;
-        background-color: transparent;
-        color: white;
-        &:hover{text-decoration: underline;}
+  
+    .no-thanks-button {
+      border: none;
+      text-decoration: none;
+      font-family: InterV_Bold;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0px;
+      text-align: center;
+      background-color: transparent;
+      color: white;
+      &:hover {
+        text-decoration: underline;
+      }
     }
-
-}
-
+  }
+  
+  

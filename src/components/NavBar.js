@@ -6,7 +6,6 @@ import { BiWorld } from "react-icons/bi";
 import { IconContext } from "react-icons";
 import { TiBusinessCard } from "react-icons/ti";
 import { GiHealthNormal } from "react-icons/gi";
-
 import { MdSportsScore, MdFavoriteBorder, MdOutlineScience } from "react-icons/md";
 import { GrTechnology } from "react-icons/gr";
 
@@ -33,26 +32,27 @@ export default function NavBar() {
     }
   };
   return (
-    <div>
-      <ul className="nav-bar">
-        <li>
-          <NavLink to="/">
-            <IconContext.Provider value={{ size: "20px" , className:"nav-link1"}}>
-              <AiFillHome />
+    <div className="nav-bar">
+      <ul >
+        <li className="nav-link-container">
+          <NavLink to="/" id="nav-link1">
+            <IconContext.Provider value={{ size: "20px", color: "#BB1E1E"}}>
+              <AiFillHome className="home-icon"/>
+              <p className="home-text">Home</p>
             </IconContext.Provider>
-            <span className="nav-link1">Home</span>
           </NavLink>
         </li>
         {navigationOptions.map((category, i) => {
           return (
             <li key={i}>
-              <NavLink to={`/categories/${category}`}>
-                <IconContext.Provider value={{ size: "20px", className:"nav-link" }}>
-                  <span className="nav-text">{getCategoryIcon(category)}</span>
+              <NavLink to={`/categories/${category}`} className="li-element">
+                <IconContext.Provider value={{ size: "20px", color: "gray" }}>
+                   <p className="category-icon">{getCategoryIcon(category)}</p>
+                   <p className="category-nav-name">{category.charAt(0).toUpperCase() + category.slice(1)}</p>
                 </IconContext.Provider>
-                {category.charAt(0).toUpperCase() + category.slice(1)}
               </NavLink>
             </li>
+
           );
         })}
       </ul>

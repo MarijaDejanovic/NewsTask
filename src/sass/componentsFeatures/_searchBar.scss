@@ -1,12 +1,14 @@
 .search-bar-header{
     display: flex;
+    position: relative;
     align-items: center;
     padding-left: $app-padding;
     padding-right: $app-padding;
     padding-top: 2em;
     justify-content: space-between;
     height: 50px;
-}
+    margin-top: 3em;
+
 h1 {
     padding-right: 10px;
     color: #BB1E1E; 
@@ -14,9 +16,8 @@ h1 {
         color: black;
     }
   }
-
 .search-field {
-    display: flex;
+    display: grid;
     align-items: center;
     flex: 1;
     margin-right: 10px;
@@ -24,13 +25,13 @@ h1 {
   }
   .search-input{
     border: none;
-    width: 30em;
+    width: 50em;
     height: 3em;
     border-radius: 3% 3% 3% 3%;
   }
-  
   .search-button{
    height: 2em;
+   width: 6em;
    background-color: #BB1E1E;
    color: white;
    font-family: InterV_Bold;
@@ -40,6 +41,6 @@ h1 {
     text-align: center;
     border: none;
     border-radius: 5% 5% 5% 5%;
-    margin-left: -80px;
-
-  }
+    margin-left: 38em;
+    margin-top: -40px;
+  }}

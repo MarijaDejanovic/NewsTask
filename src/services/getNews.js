@@ -1,3 +1,5 @@
+import { generateId } from "./generateId";
+
 export default async function getNews(categoryName) {
   const lastMonth = new Date();
   lastMonth.setMonth(lastMonth.getMonth() - 1);
@@ -14,6 +16,7 @@ export default async function getNews(categoryName) {
       const articles = json.articles.map((article) => ({
         ...article,
         categoryName: categoryName,
+        id: generateId()
       }));
       console.log(articles);
       return articles;

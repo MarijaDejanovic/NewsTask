@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 
-export default function NewsList({searchResult, setCurrentArticle, clearInput }){   
+export default function NewsList({searchResult, setCurrentArticle, clearInput}){  
     return(
         <div className="news-list">
             <ul>

@@ -1,4 +1,16 @@
 .all-articles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     font-family: InterV ;
+    height: 50px;
+    width: 100%;
+    margin-left: 15em;
+    margin-top: -45em;
+}
+
+.article-image2{
+    width: 70%;
+    height: 25em;
 }
 

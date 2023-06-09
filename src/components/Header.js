@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <div className="header">
+    <div className="header-container">
       <h2>Make MyNews your homepage</h2>
       <h3>Every day discover what's trending on the internet!</h3>
       <button className="get-button">GET</button>

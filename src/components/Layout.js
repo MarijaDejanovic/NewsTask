@@ -1,20 +1,18 @@
 import Header from "./Header";
 import SearchBar from "./SearchBar";
-import NavBar from "./NavBar";
 import { useState } from "react";
 import NewsList from "./NewsList";
-import { Outlet } from "react-router-dom";
+import NavBar from "./NavBar";
 
-export default function Layout({ news, setCurrentArticle }) {
+export default function Layout({ news, setCurrentArticle, article, handleNewsCards }) {
   const [searchResult, setSearchResult] = useState([]);
   const [containsInput, setContainsInput] = useState(false);
   const [input, setInput] = useState("");
  
   const handleSearchChange = (e) => {
-    
     const searchTerm = e.target.value.toLowerCase();
     setInput(e.target.value)
-
+    
     if (searchTerm.length) {
       setContainsInput(true);
     } else {
@@ -32,15 +30,16 @@ export default function Layout({ news, setCurrentArticle }) {
     setInput("")
     setContainsInput(false)
   }
-
   return (
     <>
       <Header />
-      <SearchBar handleSearchChange={handleSearchChange} input={input} />
-      {containsInput && <NewsList searchResult={searchResult} setCurrentArticle={setCurrentArticle} clearInput={clearInput} />}
-      <NavBar />
-      <Outlet/>
-      {/* ikonice za kategorije, tu ćemo staviti rute */}
+      <SearchBar handleSearchChange={handleSearchChange} input={input} handleNewsCards={handleNewsCards} />
+      {containsInput &&
+      <NewsList 
+      searchResult={searchResult} 
+      setCurrentArticle={setCurrentArticle} 
+      clearInput={clearInput} />}
+      <NavBar/>
     </>
   );
 }
