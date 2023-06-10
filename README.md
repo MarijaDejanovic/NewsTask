@@ -5,19 +5,19 @@ General idea was to create simple single page React app that allows users to rea
 ## Features
 
 - Displays randomly selected article news in News Cards on the Home Page. Each News Cards is consisting of article image, title, description and React Icon – Heart for bookmarking favorite articles (below please find description).
-- Browse news articles from different categories with a help of Nav-Bar on the left side of Home Page.
-- Search for specific news articles based on keywords in the input field of Search-Bar component.
-- Favorite and save articles for later viewing using React Icon and changing state of Favorite component.
-- Read the full article by clicking on the article link. 
+- Browse news articles from different categories with a help of navigation bar on the left side of Home Page.
+- Search for specific news articles based on keywords in the input field of search bar component.
+- Bookmark favorite articles and save them for later reading. 
+- Read the full article by clicking on the article. 
 
 ## Technologies Used
 
 - React.js
--React Route
-- HTML/CSS
+-React Router
+- HTML/SCSS
 - JavaScript
-- RESTAPI (News API)
-- React Icon
+- News API
+- React Icons
 
 ## Installation
 
@@ -49,14 +49,4 @@ General idea was to create simple single page React app that allows users to rea
 
 ## Configuration
 
-- Update the API key: In the project directory, find the file “.env.example” and replace the placeholder API key with your own key from the News API provider. On the first paragraph, please find ULR link for registration on News API portal to receive your unique API key.
-
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to the project, feel free to contact me on mail address: dejanovic.marija2801@gmail.com
-
-## License
-
-## Contact
-
-If you have any questions or suggestions, feel free to reach out to me at dejanovic.marija2801@gmail.com.
+- Update the API key: In the project directory, find the file “.env.example” and replace the placeholder API key with your own key from the News API provider. Please find ULR link for registration on News API portal to receive your unique API key.
